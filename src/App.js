@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <BrowserRouter> 
+      <header>
+        <section className="logo">
+          <a href="#"><img src="https://unsplash.it/150/60?image=906" alt="LOGO" /></a>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Hot</a></li>
+            <li><a href="#">Regular</a></li>
+            <li><a href="#">Poor</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">Add</a></li>
+            <li><a href="#">Search...</a></li>
+          </ul>
+        </nav>
       </header>
+      <hr />
+      <Switch>
+      <Route exact path='/'>
+      <main>
+        <ul>
+          <li>
+            <article>
+              <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+              <img src="https://unsplash.it/700/300?image=870" alt="imageForArticle" />
+            </article>
+          </li>
+          <li>
+            <article>
+              Some text
+            </article>
+          </li>
+        </ul>
+      <aside>
+        <section className="widget">
+          <h3>About author</h3>
+          <img src="https://unsplash.it/100/100?image=1062" alt="logoAuthor" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nam quae molestias officia rerum a nisi porro molestiae ut corrupti voluptatum corporis, tenetur consectetur ipsam assumenda provident neque illo! Error!</p>
+        </section>
+        <section className="links">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#">Lorem, ipsum dolor.</a></li>
+            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+          </ul>
+        </section>
+      </aside>
+      </main>
+      <hr />
+      </Route>
+        <Route path='*'>
+          <ErrorPage />
+        </Route>
+      </Switch>
+      <footer>
+            <p>Copyright &reg; by WSB students 2020/2021</p>
+      </footer>
+    </BrowserRouter> 
     </div>
   );
 }
