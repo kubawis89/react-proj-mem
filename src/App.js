@@ -1,6 +1,7 @@
 import './App.scss';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
+import Memes from './components/Memes';
 
 function App() {
   return (
@@ -26,19 +27,9 @@ function App() {
       <Switch>
       <Route exact path='/'>
       <main>
-        <ul>
-          <li>
             <article>
-              <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-              <img src="https://unsplash.it/700/300?image=870" alt="imageForArticle" />
+              <Memes />
             </article>
-          </li>
-          <li>
-            <article>
-              Some text
-            </article>
-          </li>
-        </ul>
       <aside>
         <section className="widget">
           <h3>About author</h3>
@@ -70,3 +61,5 @@ function App() {
 }
 
 export default App;
+
+// import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
