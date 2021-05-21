@@ -8,50 +8,55 @@ function App() {
     <div className="App">
     <BrowserRouter> 
       <header>
-        <section className="logo">
-          <a href="#"><img src="https://unsplash.it/150/60?image=906" alt="LOGO" /></a>
-        </section>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Hot</a></li>
-            <li><a href="#">Regular</a></li>
-            <li><a href="#">Poor</a></li>
-            <li><a href="#">Favorites</a></li>
-            <li><a href="#">Add</a></li>
-            <li><a href="#">Search...</a></li>
+        <h1 className="logo">MEM serwis</h1>
+        <nav id="topnav">
+          <ul className="menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Hot</li></a>
+          <a href="#"><li>Regular</li></a>
+          <a href="#"><li>Poor</li></a>
+          <a href="#"><li>Favorites</li></a>
+          <a href="#"><li>Add</li></a>
+          <a href="#"><li>Search...</li></a>
           </ul>
         </nav>
       </header>
-      <hr />
       <Switch>
       <Route exact path='/'>
       <main>
             <article>
               <Memes />
             </article>
-      <aside>
-        <section className="widget">
-          <h3>About author</h3>
-          <img src="https://unsplash.it/100/100?image=1062" alt="logoAuthor" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nam quae molestias officia rerum a nisi porro molestiae ut corrupti voluptatum corporis, tenetur consectetur ipsam assumenda provident neque illo! Error!</p>
-        </section>
-        <section className="links">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="#">Lorem, ipsum dolor.</a></li>
-            <li><a href="#">Lorem ipsum dolor sit.</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-          </ul>
-        </section>
-      </aside>
       </main>
-      <hr />
       </Route>
         <Route path='*'>
           <ErrorPage />
         </Route>
       </Switch>
+      <div className="socials">
+            <div className="socialdivs">
+                <a href="https://www.facebook.com">
+                    <div className="fb">
+                    <img src="/images/fb.png" width="80" alt="fb"></img>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com">
+                    <div className="yt">
+                        <i className="icon-youtube"></i>
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div className="tw">
+                        <i className="icon-twitter"></i>
+                    </div>
+                </a>
+                <a href="https://www.google.com">
+                    <div className="gplus">
+                        <i className="icon-gplus"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
       <footer>
             <p>Copyright &reg; by WSB students 2020/2021</p>
       </footer>
