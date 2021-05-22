@@ -2,8 +2,12 @@ import './App.scss';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
 import Memes from './components/Memes';
+import {useDispatch, useSelector} from 'react-redux';
 
 function App() {
+  // const dispatch = useDispatch();
+
+
   return (
     <div className="App">
     <BrowserRouter> 
@@ -24,9 +28,7 @@ function App() {
       <Switch>
       <Route exact path='/'>
       <main>
-            <article>
               <Memes />
-            </article>
       </main>
       </Route>
         <Route path='*'>
