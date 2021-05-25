@@ -1,9 +1,8 @@
 import "./App.scss";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Memes from "./components/Memes";
 import FavoriteMemes from "./components/FavoriteMemes";
-import { useDispatch, useSelector } from "react-redux";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AddMem from "./components/AddMem";
@@ -13,14 +12,15 @@ import HotMemes from "./components/HotMemes";
 import PoorMemes from "./components/PoorMemes";
 
 function App() {
-  // const dispatch = useDispatch();
-
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <Switch>
           <Route exact path="/">
+            <Redirect to="/memes" />
+          </Route>
+          <Route exact path="/memes">
             <main>
               <Memes />
             </main>
@@ -66,5 +66,3 @@ function App() {
 }
 
 export default App;
-
-// import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';

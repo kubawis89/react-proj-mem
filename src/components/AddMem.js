@@ -6,6 +6,7 @@ import {
   favoriteMem,
 } from "../store/actions/globalActions";
 import "./scss/Memes.scss";
+import { NavLink } from "react-router-dom";
 
 function AddMem() {
   const memDataFromState = useSelector((state) => state);
@@ -44,7 +45,9 @@ function AddMem() {
           <span
             className={`${mem.upvotes - mem.downvotes > 4 ? "hot" : "span1"}`}
           >
-            Hot
+            <NavLink to="/hot" className="navLink">
+              Hot
+            </NavLink>
           </span>
           <span
             className={`${
@@ -54,12 +57,16 @@ function AddMem() {
                 : "span2"
             }`}
           >
-            Regular
+            <NavLink to="/regular" className="navLink">
+              Regular
+            </NavLink>
           </span>
           <span
             className={`${mem.upvotes - mem.downvotes < 0 ? "poor" : "span3"}`}
           >
-            Poor
+            <NavLink to="/poor" className="navLink">
+              Poor
+            </NavLink>
           </span>
         </div>
         <div className="favorite">
