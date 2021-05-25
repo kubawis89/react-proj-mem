@@ -1,0 +1,104 @@
+.memSection {
+  background-color: #222930;
+  padding: 0px 20px 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #39a5f1;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.assesment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+
+.vote {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  width: 150px;
+}
+
+.thumbs {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.favorite {
+  display: flex;
+  justify-content: flex-end;
+  width: 150px;
+}
+
+// HotOrNot scss
+
+span {
+  padding: 2px;
+  width: 80px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: #2f3336;
+  font-size: 14px;
+}
+.voteResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 240px;
+}
+
+.hot {
+  background-color: green;
+  font-size: 16px;
+  border-radius: 7px 0px 0px 7px;
+  font-weight: 700;
+}
+
+.regular {
+  background-color: #39a5f1;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.poor {
+  background-color: red;
+  font-size: 16px;
+  border-radius: 0px 7px 7px 0px;
+  font-weight: 700;
+}
+
+.span1 {
+  border-radius: 7px 0px 0px 7px;
+}
+
+.span3 {
+  border-radius: 0px 7px 7px 0px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+}
