@@ -1,0 +1,67 @@
+.addContainer {
+  background-color: #222930;
+  padding: 0px 20px 50px 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  width: 600px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #39a5f1;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.addTitle {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.imgPath {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 540px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.buttonActive {
+  background-color: green;
+  cursor: pointer;
+  margin: 25px;
+  font-size: 20px;
+}
+.buttonInactive {
+  background-color: lightgray;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 15px;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.addButton {
+  background-color: yellow;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.pathInactive {
+  display: none;
+}
+
+.pathActive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

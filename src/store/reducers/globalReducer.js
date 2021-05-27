@@ -192,6 +192,12 @@ export const memReducer = (state = memData, action) => {
         memes: newArr,
       };
     }
+    case "ADD_MEM": {
+      return {
+        ...state,
+        memes: [...state.memes, action.payload],
+      };
+    }
     default: {
       return state;
     }

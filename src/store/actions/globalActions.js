@@ -18,3 +18,10 @@ export const favoriteMem = (favoriteMemId) => {
     payload: favoriteMemId,
   };
 };
+
+export const addMem = (addMemId) => {
+  return {
+    type: "ADD_MEM",
+    payload: addMemId,
+  };
+};
