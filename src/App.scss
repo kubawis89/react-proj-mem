@@ -2,85 +2,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
-  max-width: 1500px;
-  margin: 0px auto;
-  border: 1px dashed darkgray;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  background-color: #2f3336;
-  color: #efefef;
-  font-family: "Open Sans", sans-serif;
-  font-size: 17px;
-}
-
-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  border-bottom: 5px solid #1c74b2;
-}
-
-h1.logo {
-  font-size: 40px;
-  font-weight: 7000;
-  color: #ddd;
-  text-align: center;
-  letter-spacing: 5px;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-right: 50px;
-}
-
-.menu {
-  list-style-type: none;
-  margin-left: 50px;
-  padding: 0px;
-  font-size: 18px;
-  min-height: 38px;
-  line-height: 200%;
-}
-
-.menu > a {
-  display: inline-block;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: 1px dashed #0a2b42;
-}
-
-.menu li {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu > li:first-child {
-  border-left: 1px dashed #0a2b42;
-}
-
-.menu a:hover {
-  display: inline-block;
-  color: #0a2b42;
-  background-color: #1c74b2;
-}
-
-#bar {
-  background-color: #1c74b2;
-  min-height: 5px;
-  margin-bottom: 50px;
-}
-
-nav ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 3px;
+.App {
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  background-color: #2f3336;
+  color: #efefef;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
 }
 
 main {
@@ -91,66 +24,5 @@ main {
 
 article {
   width: 100%;
-  padding: 30px;
-}
-
-.socials {
-  width: 100%;
-  text-align: center;
-  background-color: #292929;
-}
-
-.socialdivs {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.fb {
-  width: 250px;
-  height: 155px;
-  margin: auto;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.fb:hover {
-  background-color: #4668b3;
-}
-
-.yt {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-.yt:hover {
-  background-color: #d94348;
-}
-
-.tw {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-.tw:hover {
-  background-color: #3095d3;
-}
-
-.gplus {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-.gplus:hover {
-  background-color: #d95333;
-}
-
-footer {
-  text-align: center;
-  background-color: #222222;
   padding: 30px;
 }

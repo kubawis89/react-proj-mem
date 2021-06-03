@@ -5,7 +5,7 @@ import {
   addDownvote,
   favoriteMem,
 } from "../store/actions/globalActions";
-import "./scss/Memes.scss";
+import "./Memes/Memes.scss";
 import { NavLink } from "react-router-dom";
 
 function FavoriteMemes() {
@@ -16,7 +16,7 @@ function FavoriteMemes() {
     .filter((mem) => mem.favorite === true)
     .map((filteredMem) => (
       <div key={filteredMem.id} className="memSection">
-        <h2>Favorite: {filteredMem.title}</h2>
+        <h2>{filteredMem.title}</h2>
         <img
           className="memImg"
           src={filteredMem.img}
@@ -27,6 +27,8 @@ function FavoriteMemes() {
           <div className="vote">
             <section className="thumbs">
               <button
+                className="button"
+                style={{ margin: "0 7px 0 0" }}
                 onClick={() => {
                   const thumbsUpId = filteredMem.id;
                   dispatch(addUpvote(thumbsUpId));
@@ -38,6 +40,8 @@ function FavoriteMemes() {
             </section>
             <section className="thumbs">
               <button
+                className="button"
+                style={{ margin: "0 7px 0 0" }}
                 onClick={() => {
                   const thumbsDownId = filteredMem.id;
                   dispatch(addDownvote(thumbsDownId));
@@ -86,6 +90,7 @@ function FavoriteMemes() {
           </div>
           <div className="favorite">
             <button
+              className="button"
               onClick={() => {
                 const favoriteMemId = filteredMem.id;
                 dispatch(favoriteMem(favoriteMemId));

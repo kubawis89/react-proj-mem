@@ -1,0 +1,44 @@
+.iconReact {
+  display: inline-flex;
+  color: #ddd;
+  &:hover {
+    color: #4668b3;
+    transform: scale(1.2);
+  }
+}
+
+.iconGit {
+  display: inline-flex;
+  color: #ddd;
+  &:hover {
+    color: #5d7bff;
+    transform: scale(1.2);
+  }
+}
+
+.iconStack {
+  display: inline-flex;
+  color: #ddd;
+  &:hover {
+    color: #f48024;
+    transform: scale(1.2);
+  }
+}
+
+.iconFont {
+  display: inline-flex;
+  color: #ddd;
+  &:hover {
+    color: #515e7b;
+    transform: scale(1.2);
+  }
+}
+
+.iconJS {
+  display: inline-flex;
+  color: #ddd;
+  &:hover {
+    color: #fcdc00;
+    transform: scale(1.2);
+  }
+}

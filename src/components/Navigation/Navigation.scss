@@ -1,0 +1,45 @@
+.topnav {
+  background-color: #1c74b2;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  box-shadow: 0px 0px 30px 10px rgba(47, 51, 54, 1);
+  .menu {
+    list-style-type: none;
+    font-size: 18px;
+    height: 35px;
+    line-height: 200%;
+    display: inline-block;
+    &:first-child {
+      border-left: 1px dashed #0a2b42;
+    }
+    .active {
+      color: #0a2b42;
+      background-color: #196499;
+      li {
+        background-color: #196499;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    li {
+      float: left;
+      height: 40px;
+      border-right: 1px dashed #0a2b42;
+      width: 100px;
+      &:hover {
+        background-color: #196499;
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: -1px;
+}

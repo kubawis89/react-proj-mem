@@ -5,7 +5,7 @@ import {
   addDownvote,
   favoriteMem,
 } from "../store/actions/globalActions";
-import "./scss/Memes.scss";
+import "./Memes/Memes.scss";
 import { NavLink } from "react-router-dom";
 
 function SearchMem() {

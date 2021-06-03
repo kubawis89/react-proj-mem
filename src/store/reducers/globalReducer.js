@@ -139,9 +139,9 @@ const memData = {
     {
       id: 18,
       title: "Mem 18",
-      upvotes: 0,
+      upvotes: 10,
       downvotes: 0,
-      favorite: false,
+      favorite: true,
       img: "/images/18.jpg",
     },
     {

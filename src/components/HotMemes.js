@@ -5,7 +5,7 @@ import {
   addDownvote,
   favoriteMem,
 } from "../store/actions/globalActions";
-import "./scss/Memes.scss";
+import "./Memes/Memes.scss";
 import { NavLink } from "react-router-dom";
 
 function HotMemes() {
@@ -27,6 +27,8 @@ function HotMemes() {
           <div className="vote">
             <section className="thumbs">
               <button
+                className="button"
+                style={{ margin: "0 7px 0 0" }}
                 onClick={() => {
                   const thumbsUpId = filteredMem.id;
                   dispatch(addUpvote(thumbsUpId));
@@ -38,6 +40,8 @@ function HotMemes() {
             </section>
             <section className="thumbs">
               <button
+                className="button"
+                style={{ margin: "0 7px 0 0" }}
                 onClick={() => {
                   const thumbsDownId = filteredMem.id;
                   dispatch(addDownvote(thumbsDownId));
@@ -86,6 +90,7 @@ function HotMemes() {
           </div>
           <div className="favorite">
             <button
+              className="button"
               onClick={() => {
                 const favoriteMemId = filteredMem.id;
                 dispatch(favoriteMem(favoriteMemId));
