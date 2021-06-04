@@ -1,12 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addUpvote,
   addDownvote,
   favoriteMem,
-} from "../store/actions/globalActions";
-import "./Memes/Memes.scss";
-import { NavLink } from "react-router-dom";
+} from "../../store/actions/globalActions";
+import "../Memes/Memes.scss";
 
 function PoorMemes() {
   const memDataFromState = useSelector((state) => state);
@@ -115,7 +115,11 @@ function PoorMemes() {
       </div>
     ));
 
-  return <div>{hotMemList}</div>;
+  return (
+    <main>
+      <div>{hotMemList}</div>
+    </main>
+  );
 }
 
 export default PoorMemes;

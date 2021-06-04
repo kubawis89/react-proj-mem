@@ -25,13 +25,8 @@ function Navigation() {
           <NavLink to="/add">
             <li>Add</li>
           </NavLink>
-          {/* <NavLink to="/search">
-          <li>Search...</li>
-          Random
-        </NavLink> */}
         </ul>
       </nav>
-      {/* <BreakDiv /> */}
     </div>
   );
 }

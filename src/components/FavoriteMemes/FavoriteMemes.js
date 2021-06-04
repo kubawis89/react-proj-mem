@@ -1,22 +1,19 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 import {
   addUpvote,
   addDownvote,
   favoriteMem,
-} from "../store/actions/globalActions";
-import "./Memes/Memes.scss";
-import { NavLink } from "react-router-dom";
+} from "../../store/actions/globalActions";
+import "../Memes/Memes.scss";
 
-function RegularMemes() {
+function FavoriteMemes() {
   const memDataFromState = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const regularMemList = memDataFromState.memes
-    .filter(
-      (mem) =>
-        mem.upvotes - mem.downvotes < 5 && mem.upvotes - mem.downvotes > -1
-    )
+  const favoriteMemList = memDataFromState.memes
+    .filter((mem) => mem.favorite === true)
     .map((filteredMem) => (
       <div key={filteredMem.id} className="memSection">
         <h2>{filteredMem.title}</h2>
@@ -118,7 +115,11 @@ function RegularMemes() {
       </div>
     ));
 
-  return <div>{regularMemList}</div>;
+  return (
+    <main>
+      <div>{favoriteMemList}</div>
+    </main>
+  );
 }
 
-export default RegularMemes;
+export default FavoriteMemes;

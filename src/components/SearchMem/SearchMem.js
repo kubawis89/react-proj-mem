@@ -1,27 +1,25 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addUpvote,
   addDownvote,
   favoriteMem,
-} from "../store/actions/globalActions";
-import "./Memes/Memes.scss";
-import { NavLink } from "react-router-dom";
+} from "../../store/actions/globalActions";
+import "../Memes/Memes.scss";
 
-function Memes() {
+function SearchMem() {
   const memDataFromState = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const memList = memDataFromState.memes.map((mem) => (
+  const memSearch = memDataFromState.memes.map((mem) => (
     <div key={mem.id} className="memSection">
-      <h2>{mem.title}</h2>
+      <h2> Search: {mem.title}</h2>
       <img className="memImg" src={mem.img} width="600" alt={mem.title}></img>
       <div className="assesment">
         <div className="vote">
           <section className="thumbs">
             <button
-              className="button"
-              style={{ margin: "0 7px 0 0" }}
               onClick={() => {
                 const thumbsUpId = mem.id;
                 dispatch(addUpvote(thumbsUpId));
@@ -33,8 +31,6 @@ function Memes() {
           </section>
           <section className="thumbs">
             <button
-              className="button"
-              style={{ margin: "0 7px 0 0" }}
               onClick={() => {
                 const thumbsDownId = mem.id;
                 dispatch(addDownvote(thumbsDownId));
@@ -75,11 +71,9 @@ function Memes() {
         </div>
         <div className="favorite">
           <button
-            className="button"
             onClick={() => {
               const favoriteMemId = mem.id;
               dispatch(favoriteMem(favoriteMemId));
-              console.log(window.pageYOffset);
             }}
           >
             <img
@@ -99,7 +93,7 @@ function Memes() {
     </div>
   ));
 
-  return <div>{memList}</div>;
+  return <div>{memSearch}</div>;
 }
 
-export default Memes;
+export default SearchMem;

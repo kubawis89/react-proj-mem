@@ -1,21 +1,19 @@
 import React from "react";
-import "./App.scss";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import ErrorPage from "./components/ErrorPage";
-import Memes from "./components/Memes";
-import FavoriteMemes from "./components/FavoriteMemes";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
-import AddMem from "./components/AddMem/AddMem";
-import SearchMem from "./components/SearchMem";
-import RegularMemes from "./components/RegularMemes";
-import HotMemes from "./components/HotMemes";
-import PoorMemes from "./components/PoorMemes";
-import Navigation from "./components/Navigation/Navigation";
-import Socials from "./components/Socials/Socials";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-
+import Header from "./components/Header/Header";
+import Navigation from "./components/Navigation/Navigation";
+import Memes from "./components/Memes/Memes";
+import HotMemes from "./components/HotMemes/HotMemes";
+import RegularMemes from "./components/RegularMemes/RegularMemes";
+import PoorMemes from "./components/PoorMemes/PoorMemes";
+import FavoriteMemes from "./components/FavoriteMemes/FavoriteMemes";
+import AddMem from "./components/AddMem/AddMem";
+import Socials from "./components/Socials/Socials";
+import Footer from "./components/Footer/Footer";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import "./App.scss";
 library.add(fab);
 
 function App() {
@@ -24,46 +22,27 @@ function App() {
       <BrowserRouter>
         <Header />
         <Navigation />
-        {/* sort/page section
-        api weather sidebar */}
         <Switch>
           <Route exact path="/">
             <Redirect to="/memes" />
           </Route>
           <Route exact path="/memes">
-            <main>
-              <Memes />
-            </main>
+            <Memes />
           </Route>
           <Route exact path="/hot">
-            <main>
-              <HotMemes />
-            </main>
+            <HotMemes />
           </Route>
           <Route exact path="/regular">
-            <main>
-              <RegularMemes />
-            </main>
+            <RegularMemes />
           </Route>
           <Route exact path="/poor">
-            <main>
-              <PoorMemes />
-            </main>
+            <PoorMemes />
           </Route>
           <Route exact path="/favorite">
-            <main>
-              <FavoriteMemes />
-            </main>
+            <FavoriteMemes />
           </Route>
           <Route exact path="/add">
-            <main>
-              <AddMem />
-            </main>
-          </Route>
-          <Route exact path="/search">
-            <main>
-              <SearchMem />
-            </main>
+            <AddMem />
           </Route>
           <Route path="*">
             <ErrorPage />
